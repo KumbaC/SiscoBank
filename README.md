@@ -11,7 +11,7 @@ Things you may want to cover:
 
 * Configuration
 
-* Database creation
+* Database creation PostgreSQL 
 
 * Database initialization
 
@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Prueba SISCOTEL (SiscoBank)
