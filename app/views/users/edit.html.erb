@@ -1,0 +1,88 @@
+
+<h2 class="text-center text-uppercase fw-bold">Cambiar información del cliente <i class="fa-solid fa-user-pen"></i></h2>
+<hr>
+<div class="container d-flex justify-content-center align-items-center" style=":100vh;">
+
+        <div class="card col-md-6">
+<br>
+<br>
+  <%= form_with model: @user do  |f| %>
+    <div class="card-body">
+
+    <%= f.label :'Tipo de persona' %><br />
+    <div class="form-check form-check-inline">
+     <%= f.radio_button  :type_person ,  1, class:'form-check-input', id:'natural' %> Natural <br />
+    </div>
+    <div class="form-check form-check-inline">
+   <%= f.radio_button  :type_person,   0, class:'form-check-input', id:'juridica' %> Juridica <br />
+  </div>
+ <hr>
+  <div class="row g-3">
+   <div class="col">
+    <%= f.label :'Cedula o Pasaporte', class:'prueba' %><br />
+    <%= f.text_field :identification, placeholder:'V-', id:'identificacion', required:true, class:'form-control identificacion' %>
+  </div>
+   <div class="col">
+    <%= f.label :'Nombre completo', class:'prueba2' %><br />
+    <%= f.text_field :name, placeholder:'Nombre del cliente', required:true, id:'nombre', class:'form-control' %>
+  </div>
+  <div class="col">
+    <%= f.label :'Correo electronico' %><br />
+    <%= f.email_field :email, placeholder:'Correo del cliente', required:true, class:'form-control' %>
+  </div>
+  <div class="row g-3">
+  <div class="col">
+    <%= f.label :'Telefono' %><br />
+    <%= f.text_field :main_phone, placeholder:'Telefono principal', required:true, class:'form-control telefono' %>
+  </div>
+  <div class="col">
+    <%= f.label :'Telefono Secundario' %><br />
+    <%= f.text_field :secondary_phone, placeholder:'Telefono secundario', class:'form-control telefonosec' %>
+  </div>
+  </div>
+
+    <%= f.hidden_field :document_issue_date, value:Time.now.strftime("%Y/%m/%d") %>
+
+
+
+    <%= f.hidden_field :document_expiration_date, value:Time.now.strftime("%Y/%m/%d") %>
+
+
+    <%= f.submit'Guardar', :class => 'btn btn-primary btn-block text-uppercase fw-bold' %>
+
+      </div>
+
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+        $('.identificacion').mask('#.000.000', {reverse: true} );
+        $('.telefono').mask(('(+58) 000-0000000'));
+        $('.telefonosec').mask(('(+58) 000-0000000'));
+
+        $('#juridica').click(function () {
+
+            $('.prueba').html("RIF"); //Label de identificacion
+            $('#identificacion').attr('placeholder','J-'); //Input de identificación
+
+            $('.prueba2').html("Nombre de la empresa"); //Label de identificacion
+            $('#nombre').attr('placeholder','Empresa'); //Input de identificación
+
+        });
+         $('#natural').click(function () {
+
+            $('.prueba').html("Cedula o Pasaporte"); //Label de identificacion
+            $('#identificacion').attr('placeholder','V-'); //Input de identificación
+
+            $('.prueba2').html("Nombre completo"); //Label de identificacion
+            $('#nombre').attr('placeholder','Nombre del cliente'); //Input de identificación
+        });
+
+
+
+
+</script>

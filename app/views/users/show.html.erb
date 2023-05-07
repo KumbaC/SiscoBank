@@ -1,0 +1,14 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @users.name %>
+</p>
+
+<p>
+  <strong>Correo Electronico:</strong>
+  <%= @users.email %>
+
+  <%= link_to '', user_path(@users), data: { turbo_method: :delete }, class:'btn btn-primary fas fa-trash' %>
+
+
+</p>
+
