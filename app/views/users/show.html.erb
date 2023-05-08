@@ -47,11 +47,11 @@
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
-                    <% if(@users.type_person === true) %>
-                    <div class="col-sm-3">
+                    <% if(@users.type_person === true) %>  <%# SI EL TIPO DE PERSONA ES TRUE ES NATURAL %>
+                    <div class="col-sm-3"> 
                       <h6 class="mb-0">Nombre completo</h6>
                     </div>
-                    <% else %>
+                    <% else %>  <%# SI EL TIPO DE PERSONA ES FALSE ES JURIDICO %>
                      <div class="col-sm-3">
                       <h6 class="mb-0">Nombre de la empresa | Razón Social</h6>
                     </div>
