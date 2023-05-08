@@ -1,24 +1,23 @@
-# README
+# LÉAME PRUEBA SISCOTEL 💻👨‍💻 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este LÉAME normalmente documentaría los pasos necesarios para obtener el
+aplicación en funcionamiento. 
 
-Things you may want to cover:
-
+Cosas que puede querer cubrir:
 * Ruby version
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Creación de base de datos PostgreSQL 
 
-* Database initialization
+* Inicialización de la base de datos
 
-* How to run the test suite
+* Cómo ejecutar el conjunto de pruebas
 
-* Services (job queues, cache servers, search engines, etc.)
+* Servicios (colas de trabajo, servidores de caché, motores de búsqueda, etc.)
 
-* Deployment instructions
+* Instrucciones de implementación
 
-* ...
+* Prueba SISCOTEL (SiscoBank)
