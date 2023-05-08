@@ -3,16 +3,18 @@
 <h2 class="text-center text-uppercase fw-bold">Información de clientes <i class="fa-solid fa-users-line"></i></h2>
 <hr>
 <br>
-<div class="d-flex justify-content-end">
+<div class="">
 <//%= link_to 'Agregar nuevo cliente', new_user_path(), class:'btn btn-primary text-uppercase' %>
 </div>
 
-<div class="card">
+<div class="row d-flex">
+<div class="row justify-content-md-center">
 
+<div class="card col-md-8">
     <div class="card-header bg-primary text-light">
         <h4 class="text-uppercase font-weight-bold">Clientes SiscoBank</h4>
     </div>
-<div class="card-body table-responsive">
+<div class="card-body table-responsive ">
 <table class="table table-bordered table-light" style="width:100%;" id="table2">
     <thead class="table-dark">
         <tr>
@@ -51,6 +53,8 @@
     <% end %>
   </table>
  </div>
+ </div>
+ </div>
 </div>
 <script>
 
@@ -59,5 +63,6 @@
             url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/es-ES.json',
         }
     });
+
 </script>
 
