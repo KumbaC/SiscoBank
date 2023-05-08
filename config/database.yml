@@ -25,7 +25,7 @@ development:
   <<: *default
   database: SiscoBank_development
   username: postgres
-  password: 'Ant0ni0k/30'
+  password: 12345678
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
