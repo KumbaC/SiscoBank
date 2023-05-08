@@ -1,6 +1,7 @@
 
 <h2 class="text-center text-uppercase fw-bold">Registrar nuevo cliente <i class="fa-solid fa-person-circle-plus"></i></h2>
 <hr>
+
 <div class="container d-flex justify-content-center align-items-center" style=":100vh;">
 
         <div class="card col-md-6">
@@ -9,7 +10,11 @@
             <//%= error %>
             </div>
           <//% end %>
+
 <br>
+<div class="card-header">
+  <%= link_to 'LISTA DE USUARIOS', users_path(), class:'btn btn-primary fas fa-users' %>
+</div>
 <br>
   <%= form_with model: @user do  |f| %>
     <div class="card-body">
@@ -75,7 +80,7 @@
             $('#identificacion').attr('placeholder','J-'); //Input de identificación
 
             $('.prueba2').html("Nombre de la empresa"); //Label de identificacion
-            $('#nombre').attr('placeholder','Empresa'); //Input de identificación
+            $('#nombre').attr('placeholder','Empresa/Razón Social'); //Input de identificación
 
         });
          $('#natural').click(function () {

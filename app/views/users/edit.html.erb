@@ -6,17 +6,12 @@
         <div class="card col-md-6">
 <br>
 <br>
+<div class="card-header">
+ <%= link_to 'LISTA DE USUARIOS', users_path(), class:'btn btn-primary fas fa-users' %>
+</div>
   <%= form_with model: @user do  |f| %>
     <div class="card-body">
 
-    <%= f.label :'Tipo de persona' %><br />
-    <div class="form-check form-check-inline">
-     <%= f.radio_button  :type_person ,  1, class:'form-check-input', id:'natural' %> Natural <br />
-    </div>
-    <div class="form-check form-check-inline">
-   <%= f.radio_button  :type_person,   0, class:'form-check-input', id:'juridica' %> Juridica <br />
-  </div>
- <hr>
   <div class="row g-3">
    <div class="col">
     <%= f.label :'Cedula o Pasaporte', class:'prueba' %><br />
